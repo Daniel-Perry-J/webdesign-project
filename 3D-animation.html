@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/page-transition.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>
+    <script type="module">
+
+        // reference source https://threejs.org/manual/#en/fundamentals
+
+        // render engine
+        import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.module.js';
+
+        const canvas = document.querySelector('#c');
+        const renderer = new THREE.WebGLRenderer({antialias: true, canvas});
+
+        // attach camera to viewport
+        const fov = 75;
+        const aspect = 2;
+        const near = 0.1;
+        const far = 5;
+        const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        camera.position.z = 2;
+
+        // build scene to render
+        const scene = new THREE.Scene();
+
+        // add cube
+        const boxWidth = 1;
+        const boxHeight = 1;
+        const boxDepth = 1;
+        const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+        const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
+
+        // create mesh
+        const cube = new THREE.Mesh(geometry, material);
+
+        // add lighting
+        const color = 0xFFFFFF;
+        const intensity = 3;
+        const light = new THREE.DirectionalLight(color, intensity);
+        light.position.set(-1, 2, 4);
+
+        // add objects to scene
+        scene.add(cube);
+        scene.add(light);
+
+        // add custom animation
+        function render(time) {
+            time /= 1000;
+            
+            cube.rotation.x = time;
+            cube.rotation.y = time;
+            
+            renderer.render(scene, camera);
+            
+            requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+
+    </script>
+</head>
+<body>
+    <canvas id="c"></canvas>
+    <a href="projects.html" class="back">Go back</a>
+</body>
+</html>
