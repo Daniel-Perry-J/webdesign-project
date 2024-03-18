@@ -2,7 +2,8 @@
     "cSpell.words": [
         "boxshadow",
         "imgs",
-        "Phong"
+        "Phong",
+        "pygame"
     ],
     "liveServer.settings.port": 5502
 }

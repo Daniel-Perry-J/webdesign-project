@@ -17,6 +17,8 @@
             <div class="logo-container">
                 <a href="https://github.com/Daniel-Perry-J" class="logo">Daniel Perry</a>
             </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <nav class="button-group">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -44,19 +46,45 @@
                 </section>
                 <section class="right-content">
                     <h1>Algorithm-Analysis</h1>
-                    <img src="imgs/Algorithm-Analysis.png" alt="">
+                    <img src="imgs/Algorithm-Analysis.png" alt="text displaying various stats about the sorting algorithms">
                 </section>
                 <section class="left-content">
-                    <h1>Project 3</h1>
-                    screenshot or image
+                    <h1>Connect4</h1>
+                    <img src="imgs/Connect4.png" alt="a graphical display of connect4">
                 </section>
                 <section class="right-content">
-                    <p>About project3</p>
+                    <p>A recreation of the 2-player board game Connect4. Made in python using the pygame libraries. Red goes first and yellow goes second. </p>
                 </section>
             </div>
             <section class="bottom-middle">
                 <h1>3D - animation</h1>
                 <a href="3D-animation.html">Click here! - to see animation.</a>
+            </section>
+            <section class="calendar-container">
+                <h1>Styled Calendar</h1>
+                <nav class="controls">
+                    <button class="prev-month">Previous</button>
+                    <h1 class="current-month">Month Name</h1>
+                    <button class="next-month">Next</button>
+                </nav>
+                <table class="calendar" cellspacing="21" cellpadding="21">
+                    <caption>Monthly Calendar</caption>
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically populated -->
+                    </tbody>
+                    <script src="scripts/calendar.js"></script>
+                </table>
             </section>
         </main>
     </div>
