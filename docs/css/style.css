@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* To minimize the size of this file
+some of the css is organized into other files */
+@import url('layout.css');
+@import url('animations.css');
+@import url('mobile.css');
+@import url('laptops.css');
+
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.active {
+    position: relative;
+    transform: translateY(5px);
+}
+
+li .active {
+    /* override boxshadow */
+    box-shadow: 1px 1px 5px inset rgb(23, 24, 73) !important;
+}
+
+.button-group {
+    /* align-self: flex-end; */
+    text-align: end;
+    flex: 3;
+    display: block;
+    padding: 1em;
+}
+
+.button-group ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.button-group ul li {
+    display: inline-block;
+    padding: 0.2em;
+}
+
+.button-group a {
+    background-color: #049faa;
+    padding: 10px 24px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(189, 231, 250);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 5px 5px rgb(23, 24, 73);
+    transition: 1.5s all;
+}
+
+.button-group a:hover {
+    background-color: #3e578e;
+    color: rgb(8, 4, 44);
+}
+
+.button-group a::before {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35), 0%,
+            rgba(0, 0, 0, 0), 80%);
+    opacity: 0;
+}
+
+
+
+/* global size setting */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #10104E;
+    text-align: center;
+    background-color: beige;
+    font-family: Raleway;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: rgb(233, 233, 233);
+    flex: 2;
+    position: sticky;
+}
+
+#wrapper {
+    background-image: linear-gradient(to right bottom, #a3591c, #d6c845, #75d3ff);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 1em;
+    height: 100%;
+    width: 80%;
+    margin: 5% auto;
+    flex: 7;
+    box-shadow: 1px 1px 5px inset beige;
+}
+
+.logo {
+    color: rgb(8, 8, 78);
+    font-size: 50pt;
+    padding: 0.2em;
+    font-family: cursive;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    top: 1em;
+    padding: 1em;
+}
+
+.logo-container {
+    /* align-self: flex-start; */
+    text-align: start;
+    flex: 2;
+}
+
+.logo:hover {
+    background-color: #3e578e;
+}
+
+main {
+    padding: 1em;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.left-content, .right-content {
+    background-color: #75d3ff;
+    grid: 1;
+    padding: 1em;
+    box-shadow: 1px 1px 5px #3e578e;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+img {
+    width: 100%;
+}
+
+.bottom-middle {
+    background-color: rgb(20, 33, 44);
+    color: aliceblue;
+}
+
+.bottom-middle a {
+    color: #c7e1f7;
+}
+
+.bottom-middle a:visited {
+    color: #10c9b6;
+}
+
+.content-text {
+    font-weight: 400;
+}
+
+.output {
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0d0038;
+    background-color: aliceblue;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    border: #10104E dashed 1em;
+    box-shadow: 2.5px 2.5px 15px #443f55
+}
+
+footer {
+    padding: 1em;
+    font-style: italic;
+    background-color: rgb(233, 233, 233);
+    flex: 1;
+}
+
+#Daniel_img {
+    width: 60%;
+    height: auto;
+}
+
+#daniel {
+    width: 50%;
+    flex: 1;
+}
+
+#frame {
+    width: 80%;
+    height: 825px;
+}
+
+.list {
+    color: rgb(38, 102, 187);
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+    flex: 2;
+}
+
+.back {
+    display: inline-block;
+    color: rgb(19, 12, 43);
+    background-color: #049faa;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 1em;
+    text-decoration: none;
+    box-shadow: 1px 5px 5px rgb(43, 44, 99);
+}
+
+.back:hover {
+    color: #75d3ff;
+    background-color: #10104E;
+    transition: 1.5s all;
+}
+
+.back::before {
+    opacity: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35), 0%,
+            rgba(0, 0, 0, 0), 80%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    border: #0e4c77 2px solid;
+    background-color: #10c9b6;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+input {
+    background-color: #13d3e0;
+}
+
+label {
+    padding: 1em 0;
+}
+
+input[type=submit] {
+    /* additional space for button */
+    margin-top: 1em;
+}
+
+/* fix icons - get rid of spacer and use css properties */
+.icons {
+    flex-direction: row;
+    display: flex;
+    padding: 1em;
+    flex: 2;
+    width: 20%;
+    gap: 0.5vw;
+}
+
+.linkedin {
+    padding: 5vw;
+    background-image: url("../imgs/linkedin.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 2;
+}
+
+.indeed {
+    padding: 5vw 2.5vw;
+    background-image: url("../imgs/indeed.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 2;
+    text-align: left;
+    width: 50%;
+}
+
+.story {
+    margin-left: 1em;
+    flex: 4;
+    color: #10104E;
+}
+
+#c {
+    width: 80%;
+    margin: auto;
+}
+
+.calendar {
+    background: linear-gradient(to bottom #f0f0f0, #e0e0e0);
+    width: 80%;
+    margin: auto;
+}
+
+caption {
+    font-size: large;
+    font-weight: 500;
+    color: #0d0038;
+    padding: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+th, td {
+    font-weight: bold;
+    background-color: #04aa6d;
+    color: #75d3ff;
+    border: 1px solid #101a2e;
+}
+
+td:nth-child(even) {
+    background-color: #a5e0a8;
+    color: #0d0038;
+}
+
+th:nth-child(odd) {
+    background-color: #049faa;
+    color: #0d0038;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    text-align: center;
+    width: 33%;
+    margin: auto;
+    justify-content: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Perry - Resume</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="scripts/nav-active.js"></script>
+    <script src="scripts/page-transition.js"></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="logo-container">
+                <a href="https://github.com/Daniel-Perry-J" class="logo">Daniel Perry</a>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav class="button-group">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    <div id="wrapper">
+        <main>
+            <h1>My Resume</h1>
+            <!-- Imports my resume from google drive and embeds it into my web page. -->
+            <!-- <iframe src="https://drive.google.com/file/d/1nelgXMEX7x0OHEAHO9cfvawAOnKZSZBi/preview" width="80%" height="1000px" allow="autoplay"></iframe> -->
+            <iframe src="docs/Daniel-Perry-Resume.html" frameborder="1px" allow="autoplay" id="frame"></iframe>
+        </main>
+    </div>
+    <footer>
+        <div class="copyright">
+            Daniel Perry &copy; 2024
+        </div>
+        <script src="scripts/footer.js"></script>
+    </footer>
+</body>
+</html>
