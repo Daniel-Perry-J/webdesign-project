@@ -77,6 +77,7 @@ function getFirstDayOfWeek(year, month) {
 prevBtn.addEventListener('click', () => {
     currentMonthIndex--;
     currentMonthIndex%=12;
+    currentMonthIndex < 0 ? currentMonthIndex = 11 : currentMonthIndex;
     populateCalendar();
 });
 

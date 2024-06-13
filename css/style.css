@@ -372,5 +372,6 @@ th:nth-child(odd) {
     gap: 1em;
     text-align: center;
     width: 33%;
-    margin: auto
+    margin: auto;
+    justify-content: center;
 }
